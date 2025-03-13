@@ -3,6 +3,7 @@
 #include <strings.h>
 #include "sway/commands.h"
 #include "sway/config.h"
+#include "sway/server.h"
 #include "list.h"
 #include "log.h"
 #include "stringop.h"
@@ -55,5 +56,15 @@ struct cmd_results *cmd_set(int argc, char **argv) {
 		list_qsort(config->symbols, compare_set_qsort);
 	}
 	var->value = join_args(argv + 1, argc - 1);
+
+	if(strcmp(var->name, "$grayscale") == 0) {
+		if(strcmp(var->value, "1") == 0) {
+			server.wlr_renderer->effects.grayscale = true;
+		}
+		else {
+			server.wlr_renderer->effects.grayscale = false;
+		}
+	}
+
 	return cmd_results_new(CMD_SUCCESS, NULL);
 }
