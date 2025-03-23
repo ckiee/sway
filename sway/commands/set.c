@@ -58,12 +58,7 @@ struct cmd_results *cmd_set(int argc, char **argv) {
 	var->value = join_args(argv + 1, argc - 1);
 
 	if(strcmp(var->name, "$grayscale") == 0) {
-		if(strcmp(var->value, "1") == 0) {
-			server.wlr_renderer->effects.grayscale = true;
-		}
-		else {
-			server.wlr_renderer->effects.grayscale = false;
-		}
+		server.renderer->effects.grayscale = atof(var->value);
 	}
 
 	return cmd_results_new(CMD_SUCCESS, NULL);
