@@ -2,11 +2,11 @@
   "nodes": {
     "nixpkgs": {
       "locked": {
-        "lastModified": 1741880028,
-        "narHash": "sha256-Rj3OQjKdE5BD5ELKmf8gJUQRYX683HfqmltPLzKT2Ic=",
+        "lastModified": 1742753982,
+        "narHash": "sha256-WYryX6lCrmh4AaEoBHA1zwTTs6vPtevT3/ywGyzz4SI=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "ac76f0dfc2f6ec628d94f3736d91fcb12c5919ac",
+        "rev": "ec9c54e7a9feec999aa34a15781080bed5082306",
         "type": "github"
       },
       "original": {
@@ -29,14 +29,18 @@
         ]
       },
       "locked": {
-        "lastModified": 1741885696,
-        "narHash": "sha256-/eH90joLr8NrukltAXfpSlDnPUOlE39ElpZHdiw9IJM=",
-        "path": "/home/tris/vend/wlroots",
-        "type": "path"
+        "lastModified": 1742754057,
+        "narHash": "sha256-kavKxFBLMlxiT+RHTlvgIIKyf9Q38jXZymxq7x5VGro=",
+        "owner": "an-empty-string",
+        "repo": "wlroots-hacks",
+        "rev": "5e1fd11c3938058ceb6bf224d9991539a49f14c2",
+        "type": "github"
       },
       "original": {
-        "path": "/home/tris/vend/wlroots",
-        "type": "path"
+        "owner": "an-empty-string",
+        "ref": "tris-patches",
+        "repo": "wlroots-hacks",
+        "type": "github"
       }
     }
   },

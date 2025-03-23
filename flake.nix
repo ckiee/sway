@@ -3,7 +3,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/release-24.11";
     wlroots-tris = {
-      url = "path:/home/tris/vend/wlroots";
+      url = "github:an-empty-string/wlroots-hacks/tris-patches";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
