@@ -14,11 +14,13 @@
   outputs = { self, nixpkgs, wlroots-tris, ... }: {
     packages.x86_64-linux.default =
       let pkgs = nixpkgs.legacyPackages.x86_64-linux;
-      in (pkgs.sway-unwrapped.override {
-        wlroots = wlroots-tris.packages.x86_64-linux.default;
-      }).overrideAttrs (old: {
-        version = "${old.version}-tris-patches";
-        src = ./.;
-      });
+      in pkgs.sway.override {
+        sway-unwrapped = (pkgs.sway-unwrapped.override {
+          wlroots_0_19 = wlroots-tris.packages.x86_64-linux.default;
+        }).overrideAttrs (old: {
+          version = "${old.version}-tris-patches";
+          src = ./.;
+        });
+      };
   };
 }
