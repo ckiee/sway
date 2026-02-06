@@ -1,5 +1,22 @@
 {
   "nodes": {
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672609657,
+        "narHash": "sha256-NRxYprVMT83HPzk9AP8pDna7ak8n0uzD+SC5D4zlU0w=",
+        "owner": "ckiee",
+        "repo": "flake-compat",
+        "rev": "98797efd2387415326b84d4665682b34130463fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ckiee",
+        "ref": "add-overrideInputs",
+        "repo": "flake-compat",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1749317353,
@@ -18,6 +35,7 @@
     },
     "root": {
       "inputs": {
+        "flake-compat": "flake-compat",
         "nixpkgs": "nixpkgs",
         "wlroots-tris": "wlroots-tris"
       }
